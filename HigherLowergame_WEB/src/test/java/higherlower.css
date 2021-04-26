@@ -1,0 +1,10 @@
+.ui-panel-images {
+    width: 100%;
+    height: 100%;
+}
+
+.noBorder tr,
+.noBorder td { border: 0 !important; }
+
+.transparentBackground tr,
+.transparentBackground td { background: transparent !important; }
