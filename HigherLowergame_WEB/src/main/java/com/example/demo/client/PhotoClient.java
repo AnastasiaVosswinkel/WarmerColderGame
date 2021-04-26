@@ -21,7 +21,7 @@ public class PhotoClient {
 
 		log.debug("Place " + place);
 		URL_PhotoReference = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=" + place
-				+ ", IL&key=AIzaSyAhGoyjCIPVdTiLfVuseEeh2wPUjAVnyAw&inputtype=textquery&fields=name,photos";
+				+ "&key=AIzaSyAhGoyjCIPVdTiLfVuseEeh2wPUjAVnyAw&inputtype=textquery&fields=name,photos";
 
 		// getForEntity -> HTTP GET verwendet
 		// Apod.class Struktur passend zum json-Text

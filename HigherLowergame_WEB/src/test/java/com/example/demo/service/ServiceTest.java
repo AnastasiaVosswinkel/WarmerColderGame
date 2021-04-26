@@ -30,8 +30,8 @@ public class ServiceTest {
 	
 	@Test
 	public void nextRoundTest() {
-		Weather weather1 = weatherClient.createWeather();
-		Weather weather2 = weatherClient.createWeather();
+		Weather weather1 = weatherClient.createRandomWeather();
+		Weather weather2 = weatherClient.createRandomWeather();
 		
 		log.debug(">>>>>>>name weather2:  " + weather2.getName());
 		service.nextRound();
