@@ -4,7 +4,7 @@ public class City {
 
 	String name;
 	String searchterm;
-	String temperature;
+	double temperature;
 	String photo;
 	
 
@@ -17,7 +17,7 @@ public class City {
 		this.name = name;
 		this.searchterm = searchterm;
 	}
-	public City(String name, String searchterm, String temperature, String photo_url) {
+	public City(String name, String searchterm, double temperature, String photo_url) {
 		super();
 		this.name = name;
 		this.searchterm = searchterm;
@@ -36,10 +36,14 @@ public class City {
 	public void setSearchterm(String searchterm) {
 		this.searchterm = searchterm;
 	}
-	public String getTemperature() {
+
+	
+	
+	
+	public double getTemperature() {
 		return temperature;
 	}
-	public void setTemperature(String temperature) {
+	public void setTemperature(double temperature) {
 		this.temperature = temperature;
 	}
 	public String getPhoto() {

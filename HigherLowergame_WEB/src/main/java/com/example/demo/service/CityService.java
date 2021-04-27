@@ -27,7 +27,7 @@ public class CityService {
 		
 		City city = new City(name, searchterm);
 		Weather weather = weatherClient.createWeather(name);
-		String temperature = String.format("%.1f", weather.getMain().getTemp());
+		double temperature = Math.round(weather.getMain().getTemp()*10) /10.0;
 		city.setTemperature(temperature);
 		
 		String photo_url = photoClient.createPhotoURL(name + " " + searchterm);

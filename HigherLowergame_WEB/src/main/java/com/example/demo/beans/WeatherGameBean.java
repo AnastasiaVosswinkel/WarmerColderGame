@@ -48,8 +48,8 @@ public class WeatherGameBean {
 	}
 	
 	public void warmer() {
-		double temp1 = Double.valueOf(city1.getTemperature());
-		double temp2 = Double.valueOf(city2.getTemperature());
+		double temp1 = city1.getTemperature();
+		double temp2 = city2.getTemperature();
 		if (temp2 >= temp1) {
 			winRound();
 		} else {
@@ -59,8 +59,8 @@ public class WeatherGameBean {
 	}
 	
 	public void colder() {
-		double temp1 = Double.valueOf(city1.getTemperature());
-		double temp2 = Double.valueOf(city2.getTemperature());
+		double temp1 = city1.getTemperature();
+		double temp2 = city2.getTemperature();
 		if (temp2 <= temp1) {
 			winRound();
 		} else {
