@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.model.City;
 import com.example.demo.service.CityService;
+import com.example.demo.service.GameLogicService;
 
 @ViewScoped
 @Named
@@ -18,10 +19,13 @@ public class WeatherGameBean {
 	static Logger log = LoggerFactory.getLogger(WeatherGameBean.class);
 	@Autowired
 	private CityService cityService;
+	@Autowired
+	private GameLogicService gameLogicService;
 	
 	private City city1 = new City();
 	private City city2 = new City();
 	private int score = 0;
+	private String motivatingMsg = "";
 	
 	@PostConstruct
 	public void init() {
@@ -30,6 +34,7 @@ public class WeatherGameBean {
 	
 	public void newGame() {
 		score = 0;
+		motivatingMsg = "";
 		city1 = cityService.getRandomCityOtherThan("");
 		city2 = cityService.getRandomCityOtherThan(city1.getName());
 		
@@ -66,6 +71,7 @@ public class WeatherGameBean {
 	
 	public void winRound() {
 		score += 1;
+		motivatingMsg = gameLogicService.createMotivatingMessage(score);
 		// here we can add animations for Right and show temperature etc. with delay
 		newRound();
 	}
@@ -98,6 +104,14 @@ public class WeatherGameBean {
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	public String getMotivatingMsg() {
+		return motivatingMsg;
+	}
+
+	public void setMotivatingMsg(String motivatingMsg) {
+		this.motivatingMsg = motivatingMsg;
 	}
 	
 	
