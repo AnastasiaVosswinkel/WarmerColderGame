@@ -18,7 +18,7 @@ public class WeatherClientTest {
 	
 	@Test
 	public void crieateWeatherTest() {
-		Weather weather = client.createWeather();
+		Weather weather = client.createRandomWeather();
 		assertNotNull(weather);
 		log.debug(">>>>>>>>Weather:" + Double.toString(weather.getMain().getTemp()));
 		log.debug(">>>>>>>>Name:" + weather.getName());

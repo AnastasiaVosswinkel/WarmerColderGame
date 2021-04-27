@@ -1,0 +1,109 @@
+package com.example.demo.beans;
+
+import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.model.City;
+import com.example.demo.service.CityService;
+
+@ViewScoped
+@Named
+public class WeatherGameBean {
+	
+	static Logger log = LoggerFactory.getLogger(WeatherGameBean.class);
+	@Autowired
+	private CityService cityService;
+	
+	private City city1 = new City();
+	private City city2 = new City();
+	private int score = 0;
+	
+	@PostConstruct
+	public void init() {
+		newGame();
+	}
+	
+	public void newGame() {
+		score = 0;
+		city1 = cityService.getRandomCityOtherThan("");
+		city2 = cityService.getRandomCityOtherThan(city1.getName());
+		
+	}
+	
+	public void newRound() {
+		String[] nameAndSearchTerm2 = {city2.getName(), city2.getSearchterm()};
+		city1 = cityService.createCity(nameAndSearchTerm2);
+		city2 = cityService.getRandomCityOtherThan(city1.getName());
+		
+	}
+	
+	public void warmer() {
+		double temp1 = Double.valueOf(city1.getTemperature());
+		double temp2 = Double.valueOf(city2.getTemperature());
+		if (temp2 >= temp1) {
+			winRound();
+		} else {
+			loseRound();
+		}
+		
+	}
+	
+	public void colder() {
+		double temp1 = Double.valueOf(city1.getTemperature());
+		double temp2 = Double.valueOf(city2.getTemperature());
+		if (temp2 <= temp1) {
+			winRound();
+		} else {
+			loseRound();
+		}
+		
+	}
+	
+	public void winRound() {
+		score += 1;
+		// here we can add animations for Right and show temperature etc. with delay
+		newRound();
+	}
+	
+	public void loseRound() {
+		// here we can add animations for Wrong and show temperature etc. with delay
+		// also we could fade the screen to gray and show a "play again?" button before we start a new game
+		newGame();
+	}
+
+	public City getCity1() {
+		return city1;
+	}
+
+	public void setCity1(City city1) {
+		this.city1 = city1;
+	}
+
+	public City getCity2() {
+		return city2;
+	}
+
+	public void setCity2(City city2) {
+		this.city2 = city2;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	
+	
+	
+	
+	
+	
+}

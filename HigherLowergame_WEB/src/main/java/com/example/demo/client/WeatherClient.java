@@ -19,8 +19,22 @@ public class WeatherClient {
 	private RestTemplate template = new RestTemplate();
 	
 
+	
+	public Weather createWeather(String cityname) { 
+		urlOpenWeather = "http://api.openweathermap.org/data/2.5/weather?q=" + cityname
+				+ "&appid=10f38280437ab8df65454df7de2244ba&units=metric&lang=en";
 
-	public Weather createWeather() {
+		ResponseEntity<Weather> re = template.getForEntity(urlOpenWeather, Weather.class);
+
+		Weather weather = re.getBody();
+		
+		return weather;
+		
+	}
+	
+	
+
+	public Weather createRandomWeather() {
 		
 		String[] cities = {"Hamburg", "Milan", "Portu", "Rom", "Yakutsk", "Bern",
 				"Oslo", "Kingston", "Budapest", "Riyadh", "Hanoi",

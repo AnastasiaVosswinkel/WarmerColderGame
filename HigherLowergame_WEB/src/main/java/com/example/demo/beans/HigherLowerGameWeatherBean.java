@@ -37,8 +37,8 @@ public class HigherLowerGameWeatherBean {
 
 	@PostConstruct
 	public void init() {
-		weather1  = weatherClient.createWeather();
-		weather2  = weatherClient.createWeather();	
+		weather1  = weatherClient.createRandomWeather();
+		weather2  = weatherClient.createRandomWeather();	
 		photo1 = photoClient.createPhotoURL(weather1.getName());
 		photo2 = photoClient.createPhotoURL(weather2.getName());
 	
