@@ -24,6 +24,7 @@ public class HigherLowergameWeatherService {
 
 	
 	public void nextRound() {
+		
 		weather1 = weather2;
 		weather2 = weatherClient.createWeather();
 		photo1 = photoClient.createPhotoURL(weather1.getName());

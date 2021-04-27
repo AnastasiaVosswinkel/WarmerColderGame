@@ -47,7 +47,15 @@ public class HigherLowerGameWeatherBean {
 	}
 	
 	public void warmer() {
-		service.nextRound();
+		
+		
+		weather1 = weather2;
+		weather2 = weatherClient.createWeather();
+		photo1 = photoClient.createPhotoURL(weather1.getName());
+		photo2 = photoClient.createPhotoURL(weather2.getName());
+		
+		
+		//service.nextRound();
 	}
 	
 	
