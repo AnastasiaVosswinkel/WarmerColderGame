@@ -8,8 +8,7 @@ public class Const {
 		public static final String[][] CITY_SEARCHTERM_LIST = {
 				{"Paris", "Eiffelturm"},
 				{"Berlin", "Brandenburger Tor"}, 
-				{"Hamburg", "Elbphilharmonie"}, 
-				{"Bamberg", "Dom"}
+				{"Hamburg", "Elbphilharmonie"}
 				};
 
 }
