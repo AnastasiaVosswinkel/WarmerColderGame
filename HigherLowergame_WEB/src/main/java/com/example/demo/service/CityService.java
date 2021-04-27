@@ -2,6 +2,8 @@ package com.example.demo.service;
 
 import java.util.Random;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +15,8 @@ import com.example.demo.сonst.Const;
 
 @Service
 public class CityService {
-
+	
+	static Logger log = LoggerFactory.getLogger(CityService.class);
 	private String[][] cityList = Const.CITY_SEARCHTERM_LIST;
 	@Autowired
 	private WeatherClient weatherClient;
@@ -37,6 +40,7 @@ public class CityService {
 	}
 	
 	public City getRandomCityOtherThan(String notThisCity) {
+		City city = new City();
 		Random random = new Random();
 		int randomInt = random.nextInt(cityList.length);
 		String[] nameAndSearchTerm = cityList[randomInt]; 
@@ -44,7 +48,13 @@ public class CityService {
 			randomInt = random.nextInt(cityList.length);
 			nameAndSearchTerm = cityList[randomInt]; 
 		}
-		City city = createCity(nameAndSearchTerm);
+		
+		try {city = createCity(nameAndSearchTerm);
+		} catch (NullPointerException e) {
+			log.error("Place " + nameAndSearchTerm[0] + " has no photo. Trying new random city.");
+			city = getRandomCityOtherThan(notThisCity);
+		}
+		
 		return city;
 		
 		
