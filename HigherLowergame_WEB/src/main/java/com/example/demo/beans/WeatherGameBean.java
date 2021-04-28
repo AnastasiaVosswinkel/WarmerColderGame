@@ -1,5 +1,6 @@
 package com.example.demo.beans;
 
+import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
@@ -26,6 +27,7 @@ public class WeatherGameBean {
 	private City city2 = new City();
 	private int score = 0;
 	private String motivatingMsg = "";
+	private String weathert = "";
 	
 	@PostConstruct
 	public void init() {
@@ -47,16 +49,34 @@ public class WeatherGameBean {
 		
 	}
 	
-	public void warmer() {
-		double temp1 = Double.valueOf(city1.getTemperature());
+	public void warmer() throws InterruptedException {
+		
+		
+		winRound();
+	
+		
+		/*
+		 * double temp1 = Double.valueOf(city1.getTemperature());
+		
 		double temp2 = Double.valueOf(city2.getTemperature());
 		if (temp2 >= temp1) {
 			winRound();
 		} else {
 			loseRound();
 		}
+		*/
+	}
+	
+	public void showweathertwo() {
+		//weathert = "Right!";
+		
+		weathert = "Right! " + city2.getTemperature() + "°C";
 		
 	}
+	
+		
+		
+	
 	
 	public void colder() {
 		double temp1 = Double.valueOf(city1.getTemperature());
@@ -70,6 +90,7 @@ public class WeatherGameBean {
 	}
 	
 	public void winRound() {
+		weathert= "";
 		score += 1;
 		motivatingMsg = gameLogicService.createMotivatingMessage(score);
 		// here we can add animations for Right and show temperature etc. with delay
@@ -112,6 +133,14 @@ public class WeatherGameBean {
 
 	public void setMotivatingMsg(String motivatingMsg) {
 		this.motivatingMsg = motivatingMsg;
+	}
+
+	public String getWeathert() {
+		return weathert;
+	}
+
+	public void setWeathert(String weathert) {
+		this.weathert = weathert;
 	}
 	
 	
