@@ -49,6 +49,7 @@ public class WeatherGameBean {
 		
 	}
 	
+<<<<<<< HEAD
 	public void warmer() throws InterruptedException {
 		
 		
@@ -59,6 +60,11 @@ public class WeatherGameBean {
 		 * double temp1 = Double.valueOf(city1.getTemperature());
 		
 		double temp2 = Double.valueOf(city2.getTemperature());
+=======
+	public void warmer() {
+		double temp1 = city1.getTemperature();
+		double temp2 = city2.getTemperature();
+>>>>>>> branch 'master' of https://github.com/AnastasiaVosswinkel/WarmerColderGame.git
 		if (temp2 >= temp1) {
 			winRound();
 		} else {
@@ -79,8 +85,8 @@ public class WeatherGameBean {
 	
 	
 	public void colder() {
-		double temp1 = Double.valueOf(city1.getTemperature());
-		double temp2 = Double.valueOf(city2.getTemperature());
+		double temp1 = city1.getTemperature();
+		double temp2 = city2.getTemperature();
 		if (temp2 <= temp1) {
 			winRound();
 		} else {
