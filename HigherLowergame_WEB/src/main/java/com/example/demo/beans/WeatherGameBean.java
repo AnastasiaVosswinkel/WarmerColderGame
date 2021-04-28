@@ -27,7 +27,7 @@ public class WeatherGameBean {
 	private City city2 = new City();
 	private int score = 0;
 	private String motivatingMsg = "";
-	private String weathert = "";
+	private String resultweather = "?";
 	
 	@PostConstruct
 	public void init() {
@@ -49,40 +49,27 @@ public class WeatherGameBean {
 		
 	}
 	
-<<<<<<< HEAD
-	public void warmer() throws InterruptedException {
-		
-		
-		winRound();
+
 	
 		
-		/*
-		 * double temp1 = Double.valueOf(city1.getTemperature());
+		
+		double temp1 = Double.valueOf(city1.getTemperature());
 		
 		double temp2 = Double.valueOf(city2.getTemperature());
-=======
+		
+
 	public void warmer() {
+		
 		double temp1 = city1.getTemperature();
 		double temp2 = city2.getTemperature();
->>>>>>> branch 'master' of https://github.com/AnastasiaVosswinkel/WarmerColderGame.git
+
 		if (temp2 >= temp1) {
 			winRound();
 		} else {
 			loseRound();
 		}
-		*/
-	}
-	
-	public void showweathertwo() {
-		//weathert = "Right!";
-		
-		weathert = "Right! " + city2.getTemperature() + "°C";
 		
 	}
-	
-		
-		
-	
 	
 	public void colder() {
 		double temp1 = city1.getTemperature();
@@ -95,8 +82,40 @@ public class WeatherGameBean {
 		
 	}
 	
+	public void showWeatherTwoWarmer() {
+
+		// resultweather = "Right! " + city2.getTemperature() + "°C";
+
+		double temp1 = city1.getTemperature();
+		double temp2 = city2.getTemperature();
+
+		if (temp2 >= temp1) {
+			resultweather = "Right " + city2.getTemperature() + "°C";
+		} else {
+
+		}
+	}
+	
+	public void showWeatherTwoColder() {
+
+		double temp1 = city1.getTemperature();
+		double temp2 = city2.getTemperature();
+		if (temp2 <= temp1) {
+			resultweather = "Right " + city2.getTemperature() + "°C";
+		} else {
+			
+		}
+		
+	}
+	
+		
+		
+	
+	
+	
+	
 	public void winRound() {
-		weathert= "";
+		resultweather= "?";
 		score += 1;
 		motivatingMsg = gameLogicService.createMotivatingMessage(score);
 		// here we can add animations for Right and show temperature etc. with delay
@@ -141,12 +160,12 @@ public class WeatherGameBean {
 		this.motivatingMsg = motivatingMsg;
 	}
 
-	public String getWeathert() {
-		return weathert;
+	public String getresultweather() {
+		return resultweather;
 	}
 
-	public void setWeathert(String weathert) {
-		this.weathert = weathert;
+	public void setresultweather(String weathert) {
+		this.resultweather = weathert;
 	}
 	
 	
