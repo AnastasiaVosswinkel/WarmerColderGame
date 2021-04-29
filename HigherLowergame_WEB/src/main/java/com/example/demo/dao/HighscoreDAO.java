@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.springframework.stereotype.Service;
 
@@ -55,5 +56,21 @@ public class HighscoreDAO {
 		return false;
 		
 	}
+	
+	public ArrayList<User> rankUsers (ArrayList<User> users){
+		users.sort(Collections.reverseOrder());
+		
+		users.get(0).setRank(1);
+		for (int i = 1; i < users.size(); i++) {
+			if (users.get(i).getScore() == users.get(i-1).getScore()) {
+				users.get(i).setRank(users.get(i-1).getRank());
+			} else {
+				users.get(i).setRank(i+1);
+			}
+			
+		}
+		return users;
+	}
+	
 	
 }

@@ -1,6 +1,10 @@
 package com.example.demo.service;
 
+import java.util.Random;
+
 import org.springframework.stereotype.Service;
+
+import com.example.demo.сonst.Const;
 
 @Service
 public class GameLogicService {
@@ -18,10 +22,18 @@ public class GameLogicService {
 		} else if (score >=1) {
 			motivatingMsg = "Nice, great start!";
 		}
-		
-		
-		
+
 		return motivatingMsg;
+	}
+	
+	public String getRandomQuote() {
+		String quote = "";
+		Random random = new Random();
+		String[] quoteList = Const.MOTIVATING_QUOTES;
+		int randomInt = random.nextInt(quoteList.length);
+		quote = quoteList[randomInt];
+		return quote;
+		
 	}
 	
 

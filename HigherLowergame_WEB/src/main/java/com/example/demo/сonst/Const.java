@@ -40,4 +40,16 @@ public class Const {
 					{"Mexico City", "Mexico City Metropolitan Cathedral"}
 					};
 
+		public static final String[] MOTIVATING_QUOTES = {
+				"\"Success is not final; failure is not fatal: It is the courage to continue that counts.\" — Winston S. Churchill", 
+				"\"You only fail when you stop trying.\" — Albert Einstein", 
+				"\"Every strike brings me closer to the next home run.\" — Babe Ruth", 
+				"\"You learn more from failure than from success. Don’t let it stop you. Failure builds character.\" — Unknown", 
+				"\"Failure is simply the opportunity to begin again, this time more intelligently.\" — Henry Ford", 
+				"\"Our greatest glory is not in never falling, but in rising every time we fall.\" — Confucius ", 
+				"\"It's fine to celebrate success but it is more important to heed the lessons of failure.\" — Bill Gates",
+				"\"I never dreamed about success. I worked for it.\" — Estée Lauder",
+				"\"The road to success and the road to failure are almost exactly the same.\" — Colin R. Davis"
+		};
+		
 }

@@ -12,39 +12,122 @@
     "rank": 1
   },
   {
+    "id": 21,
+    "score": 6,
+    "name": "testssass",
+    "rank": 3
+  },
+  {
     "id": 7,
     "score": 5,
     "name": "Milu",
-    "rank": 3
+    "rank": 4
+  },
+  {
+    "id": 8,
+    "score": 5,
+    "name": "Testa",
+    "rank": 4
   },
   {
     "id": 0,
     "score": 3,
     "name": "Sebastian",
-    "rank": 4
+    "rank": 6
   },
   {
     "id": 1,
     "score": 2,
     "name": "Manfred",
-    "rank": 5
+    "rank": 7
   },
   {
     "id": 3,
     "score": 2,
     "name": "Annamarie-Sophie",
-    "rank": 5
+    "rank": 7
+  },
+  {
+    "id": 12,
+    "score": 2,
+    "name": "Nico",
+    "rank": 7
+  },
+  {
+    "id": 14,
+    "score": 2,
+    "name": "Anastasia2",
+    "rank": 7
+  },
+  {
+    "id": 14,
+    "score": 2,
+    "name": "Anastasia2",
+    "rank": 7
+  },
+  {
+    "id": 11,
+    "score": 1,
+    "name": "waasdfasdf",
+    "rank": 12
+  },
+  {
+    "id": 11,
+    "score": 1,
+    "name": "waasdfasdf",
+    "rank": 12
+  },
+  {
+    "id": 11,
+    "score": 1,
+    "name": "waasdfasdf",
+    "rank": 12
+  },
+  {
+    "id": 17,
+    "score": 1,
+    "rank": 12
+  },
+  {
+    "id": 18,
+    "score": 1,
+    "name": "User",
+    "rank": 12
+  },
+  {
+    "id": 19,
+    "score": 1,
+    "name": "User2",
+    "rank": 12
   },
   {
     "id": 5,
     "score": 0,
     "name": "Anton",
-    "rank": 7
+    "rank": 18
   },
   {
     "id": 6,
     "score": 0,
     "name": "Seb",
-    "rank": 7
+    "rank": 18
+  },
+  {
+    "id": 16,
+    "score": 0,
+    "name": "Anastasia",
+    "rank": 18
+  },
+  {
+    "id": 16,
+    "score": 0,
+    "name": "Anastasia",
+    "rank": 18
+  },
+  {
+    "id": 20,
+    "score": 0,
+    "name": "User2",
+    "rank": 18
   }
 ]
