@@ -27,7 +27,7 @@ public class WeatherGameBean {
 	private City city2 = new City();
 	private int score = 0;
 	private String motivatingMsg = "";
-	private String resultweather = "?";
+	private String resultweather = "is";
 	
 	@PostConstruct
 	public void init() {
@@ -35,6 +35,7 @@ public class WeatherGameBean {
 	}
 	
 	public void newGame() {
+		resultweather= "is";
 		score = 0;
 		motivatingMsg = "";
 		city1 = cityService.getRandomCityOtherThan("");
@@ -92,7 +93,7 @@ public class WeatherGameBean {
 		if (temp2 >= temp1) {
 			resultweather = "Right " + city2.getTemperature() + "°C";
 		} else {
-
+			resultweather = "Wrong " + city2.getTemperature() + "°C";
 		}
 	}
 	
@@ -103,19 +104,18 @@ public class WeatherGameBean {
 		if (temp2 <= temp1) {
 			resultweather = "Right " + city2.getTemperature() + "°C";
 		} else {
+			resultweather = "Wrong " + city2.getTemperature() + "°C";
 			
 		}
 		
 	}
 	
 		
-		
-	
-	
+
 	
 	
 	public void winRound() {
-		resultweather= "?";
+		resultweather= "is";
 		score += 1;
 		motivatingMsg = gameLogicService.createMotivatingMessage(score);
 		// here we can add animations for Right and show temperature etc. with delay
@@ -123,6 +123,7 @@ public class WeatherGameBean {
 	}
 	
 	public void loseRound() {
+		
 		// here we can add animations for Wrong and show temperature etc. with delay
 		// also we could fade the screen to gray and show a "play again?" button before we start a new game
 		newGame();

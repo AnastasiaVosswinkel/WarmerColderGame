@@ -50,7 +50,7 @@ public class CityService {
 		}
 		
 		try {city = createCity(nameAndSearchTerm);
-		} catch (NullPointerException e) {
+		} catch (Exception e) {
 			log.error("Place " + nameAndSearchTerm[0] + " has no photo. Trying new random city.");
 			city = getRandomCityOtherThan(notThisCity);
 		}

@@ -32,7 +32,7 @@
         linear-gradient(
           rgba(0, 0, 0, 0.4), 
           rgba(0, 0, 0, 0.4)
-        ), url(#{weatherGameBean.city1.photo}); width:260px; height:290px; margin:0 auto; background-size: cover; background-repeat:no-repeat">
+        ), url(#{weatherGameBean.city1.photo}); width:500px; height:500px; margin:0 auto; background-size: cover; background-repeat:no-repeat">
 
 					<p:panelGrid columns="1"
 						style="vertical-align: middle; margin: 0 auto"
@@ -58,7 +58,7 @@
         linear-gradient(
           rgba(0, 0, 0, 0.4), 
           rgba(0, 0, 0, 0.4)
-        ), url(#{weatherGameBean.city2.photo}); width:260px; height:290px; margin:0 auto; background-size: cover; background-repeat:no-repeat">
+        ), url(#{weatherGameBean.city2.photo}); width:500px; height:500px; margin:0 auto; background-size: cover; background-repeat:no-repeat">
 					<p:panelGrid columns="1" style="text-align: center; margin: 0 auto"
 						styleClass="ui-panelgrid-blank">
 
@@ -70,12 +70,12 @@
 							value="#{weatherGameBean.city2.name}"
 							style="font-size: 40px !important; font-weight:; color: white" />
 
-						<h:outputText id="is_2" value=""
+						<h:outputText id="is_2" value="#{weatherGameBean.resultweather}"
 							style="font-size: 14px !important; font-weight:; color: white" />
 
 
 						<h:outputText id="city_weather_2"
-							value="#{weatherGameBean.resultweather}"
+							value=""
 							style="font-size: 14px !important;  color: white" />
 
 						<p:commandButton
