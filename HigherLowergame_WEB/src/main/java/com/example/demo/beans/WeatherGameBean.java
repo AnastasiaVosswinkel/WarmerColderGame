@@ -94,7 +94,7 @@ public class WeatherGameBean {
 		if (temp2 >= temp1) {
 			resultweather = "Right " + city2.getTemperature() + "°C";
 		} else {
-			resultweather = "Wrong " + city2.getTemperature() + "°C";
+			resultweather = city2.getTemperature() + "°C";
 		}
 	}
 	
@@ -105,7 +105,7 @@ public class WeatherGameBean {
 		if (temp2 <= temp1) {
 			resultweather = "Right " + city2.getTemperature() + "°C";
 		} else {
-			resultweather = "Wrong " + city2.getTemperature() + "°C";
+			resultweather = city2.getTemperature() + "°C";
 			
 		}
 		
