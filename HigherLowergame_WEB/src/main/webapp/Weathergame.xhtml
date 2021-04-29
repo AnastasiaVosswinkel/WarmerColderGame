@@ -25,6 +25,13 @@
 	<h:form>
 
 		<p:panel id="panel">
+		<p:toolbar id="about_the_game" style="">
+			<p:toolbarGroup>
+				<h:outputText
+					value="Where is it warmer?" style="font-size: 20px !important" />
+			</p:toolbarGroup>
+		</p:toolbar>
+		
 			<p:panelGrid id="img_panel" columns="2" width="100%">
 				<p:panel id="panel_1" widgetvar="panelwv"
 					style="text-align:center;  background:
@@ -74,8 +81,7 @@
 							style="font-size: 14px !important; font-weight:; color: white" />
 
 
-						<h:outputText id="city_weather_2"
-							value=""
+						<h:outputText id="city_weather_2" value=""
 							style="font-size: 14px !important;  color: white" />
 
 						<p:commandButton
@@ -84,7 +90,7 @@
 							actionListener="#{weatherGameBean.showWeatherTwoWarmer}"
 							update="panel toolbar">
 
-							<p:ajax delay="2000" listener="#{weatherGameBean.warmer}"
+							<p:ajax delay="1000" listener="#{weatherGameBean.warmer}"
 								update="panel toolbar" />
 
 
@@ -100,7 +106,7 @@
 							update="panel toolbar">
 
 
-							<p:ajax delay="2000" listener="#{weatherGameBean.colder}"
+							<p:ajax delay="1000" listener="#{weatherGameBean.colder}"
 								update="panel toolbar" />
 						</p:commandButton>
 
@@ -117,11 +123,14 @@
 
 		</p:panel>
 
-<p:dialog  id="dialog" widgetVar="dlg" minHeight="40" width="350" showEffect="fade" modal="true" closable="false" resizable="false" draggable="false">
-    <h:outputText value="You lost :("/>
-    						<p:commandButton value="Play again?" actionListener="#{weatherGameBean.newGame}"
-							update="panel toolbar dialog" onClick="PF('dlg').hide()"/>
-</p:dialog>
+		<p:dialog id="dialog" widgetVar="dlg" minHeight="40" width="350"
+			showEffect="fade" modal="true" closable="false" resizable="false"
+			draggable="false">
+			<h:outputText value="You lost :(" />
+			<p:commandButton value="Play again?"
+				actionListener="#{weatherGameBean.newGame}"
+				update="panel toolbar dialog" onClick="PF('dlg').hide()" />
+		</p:dialog>
 
 		<p:toolbar id="toolbar">
 			<p:toolbarGroup>
@@ -133,8 +142,7 @@
 			</p:toolbarGroup>
 		</p:toolbar>
 
-
-
+		
 
 	</h:form>
 
