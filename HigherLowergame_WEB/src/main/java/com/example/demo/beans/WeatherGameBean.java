@@ -5,6 +5,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
+import org.primefaces.PrimeFaces;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -126,7 +127,8 @@ public class WeatherGameBean {
 		
 		// here we can add animations for Wrong and show temperature etc. with delay
 		// also we could fade the screen to gray and show a "play again?" button before we start a new game
-		newGame();
+		//newGame();
+		PrimeFaces.current().executeScript("PF('dlg').show()");
 	}
 
 	public City getCity1() {
