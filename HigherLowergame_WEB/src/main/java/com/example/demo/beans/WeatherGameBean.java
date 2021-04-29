@@ -67,6 +67,7 @@ public class WeatherGameBean {
 		city2 = cityService.getRandomCityOtherThan(city1.getName());
 		
 	}
+
 		
 
 	public void warmer() {

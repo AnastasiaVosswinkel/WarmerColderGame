@@ -21,6 +21,13 @@
 	<h:form>
 
 		<p:panel id="panel">
+			<p:toolbar id="about_the_game" style="">
+				<p:toolbarGroup>
+					<h:outputText value="Where is it warmer?"
+						style="font-size: 20px !important" />
+				</p:toolbarGroup>
+			</p:toolbar>
+
 			<p:panelGrid id="img_panel" columns="2" width="100%">
 				<p:panel id="panel_1" widgetvar="panelwv"
 					style="text-align:center;  background:
@@ -44,6 +51,24 @@
 						<h:outputText id="city_weather_1"
 							value="#{weatherGameBean.city1.temperature} °C"
 							style="font-size: 30px !important; font-weight:bold; color: yellow" />
+							
+						<p:panelGrid columns="1" style="text-align: left; margin: 60"
+							styleClass="ui-panelgrid-blank">
+							<h:outputText id="country_1"
+								value="#{weatherGameBean.city1.fullCountryName}"
+								style="font-size: 14px !important; font-weight:; color: Yellow" />
+
+							<h:outputText id="countrySubregion_1"
+								value="Subregion: #{weatherGameBean.city1.countrySubregion}"
+								style="font-size: 14px !important; font-weight:; color: white" />
+							<h:outputText id="currencies_1"
+								value="Currencies: #{weatherGameBean.city1.currencies}"
+								style="font-size: 14px !important; font-weight:; color: white" />
+							<h:outputText id="countrypopulation_1"
+								value="Population of #{weatherGameBean.city1.fullCountryName}: #{weatherGameBean.city1.countryPopulation}"
+								style="font-size: 14px !important; font-weight:; color: white" />
+						</p:panelGrid>
+						
 					</p:panelGrid>
 				</p:panel>
 
@@ -70,8 +95,7 @@
 							style="font-size: 14px !important; font-weight:; color: white" />
 
 
-						<h:outputText id="city_weather_2"
-							value=""
+						<h:outputText id="city_weather_2" value=""
 							style="font-size: 14px !important;  color: white" />
 
 						<p:commandButton
@@ -80,7 +104,7 @@
 							actionListener="#{weatherGameBean.showWeatherTwoWarmer}"
 							update="panel toolbar">
 
-							<p:ajax delay="2000" listener="#{weatherGameBean.warmer}"
+							<p:ajax delay="1000" listener="#{weatherGameBean.warmer}"
 								update="panel toolbar" />
 
 						</p:commandButton>
@@ -94,7 +118,7 @@
 							update="panel toolbar">
 
 
-							<p:ajax delay="2000" listener="#{weatherGameBean.colder}"
+							<p:ajax delay="1000" listener="#{weatherGameBean.colder}"
 								update="panel toolbar" />
 						</p:commandButton>
 
@@ -102,6 +126,23 @@
 							value="Than in #{weatherGameBean.city1.name}"
 							style="font-size: 14px !important;  color: white" />
 
+						<p:panelGrid columns="1" style="text-align: left; margin-bottom: 7px"
+							styleClass="ui-panelgrid-blank">
+							<h:outputText id="country_2"
+								value="#{weatherGameBean.city2.fullCountryName}"
+								style="font-size: 14px !important; font-weight:; color: Yellow" />
+
+							<h:outputText id="countrySubregion_2"
+								value="Subregion: #{weatherGameBean.city2.countrySubregion}"
+								style="font-size: 14px !important; font-weight:; color: white" />
+							<h:outputText id="currencies_2"
+								value="Currencies: #{weatherGameBean.city2.currencies}"
+								style="font-size: 14px !important; font-weight:; color: white" />
+							<h:outputText id="countrypopulation_2"
+								value="Population of #{weatherGameBean.city2.fullCountryName}: #{weatherGameBean.city1.countryPopulation}"
+								style="font-size: 14px !important; font-weight:; color: white" />
+
+						</p:panelGrid>
 					</p:panelGrid>
 
 
@@ -121,6 +162,7 @@
 						
 </p:dialog>
 
+
 <p:toolbar id="toolbar">
 	<p:toolbarGroup>
 		<h:outputText value="Your Score: " />
@@ -130,7 +172,6 @@
 
 	</p:toolbarGroup>
 </p:toolbar>
-
 
 
 
