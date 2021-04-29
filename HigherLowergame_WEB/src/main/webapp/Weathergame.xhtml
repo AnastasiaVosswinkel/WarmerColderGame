@@ -117,6 +117,11 @@
 
 		</p:panel>
 
+<p:dialog  id="dialog" widgetVar="dlg" minHeight="40" width="350" showEffect="fade" modal="true" closable="false" resizable="false" draggable="false">
+    <h:outputText value="You lost :("/>
+    						<p:commandButton value="Play again?" actionListener="#{weatherGameBean.newGame}"
+							update="panel toolbar dialog" onClick="PF('dlg').hide()"/>
+</p:dialog>
 
 		<p:toolbar id="toolbar">
 			<p:toolbarGroup>
