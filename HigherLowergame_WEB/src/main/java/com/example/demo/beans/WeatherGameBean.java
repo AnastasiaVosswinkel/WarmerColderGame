@@ -51,8 +51,6 @@ public class WeatherGameBean {
 		
 	}
 	
-
-	
 		
 		
 		double temp1 = Double.valueOf(city1.getTemperature());
