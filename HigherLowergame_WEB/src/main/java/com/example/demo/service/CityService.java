@@ -12,6 +12,7 @@ import com.example.demo.client.CountryInformationClient;
 import com.example.demo.client.PhotoClient;
 import com.example.demo.client.WeatherClient;
 import com.example.demo.model.City;
+import com.example.demo.model.countryinformation.CountryInformation;
 import com.example.demo.model.weather.Weather;
 import com.example.demo.сonst.Const;
 
@@ -37,15 +38,17 @@ public class CityService {
 		city.setTemperature(temperature);
 		String country = weather.getSys().getCountry();
 		city.setCountry(country);
-		String countryPopulation = String.valueOf(new DecimalFormat( "###,###" ).format(countryInformationClient.createCountryInformationURL(country).getPopulation()));
+		CountryInformation countryInformation = countryInformationClient.createCountryInformationURL(country);
+		
+		String countryPopulation = String.valueOf(new DecimalFormat( "###,###" ).format(countryInformation.getPopulation()));
 		city.setCountryPopulation(countryPopulation);
-		String fullCountryName = countryInformationClient.createCountryInformationURL(country).getName();
+		String fullCountryName = countryInformation.getName();
 		city.setFullCountryName(fullCountryName);
-		String countrySubregion = countryInformationClient.createCountryInformationURL(country).getSubregion();
+		String countrySubregion = countryInformation.getSubregion();
 		city.setCountrySubregion(countrySubregion);
-		String currencies = countryInformationClient.createCountryInformationURL(country).getCurrencies().get(0).getName();
+		String currencies = countryInformation.getCurrencies().get(0).getName();
 		city.setCurrencies(currencies);
-		String countryFlag = countryInformationClient.createCountryInformationURL(country).getFlag();
+		String countryFlag = countryInformation.getFlag();
 		city.setCountryFlag(countryFlag);
 		
 		String photo_url = photoClient.createPhotoURL(name + " " + searchterm);

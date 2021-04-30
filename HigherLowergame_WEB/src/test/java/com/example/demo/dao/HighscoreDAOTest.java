@@ -38,8 +38,7 @@ public class HighscoreDAOTest {
 		users.add(anso);
 		users.add(georg);
 		users.add(anton);
-		HighscoreBean bean = new HighscoreBean();
-		users = bean.rankUsers(users);
+		users = highscoreDAO.rankUsers(users);
 		
 		System.out.println(users);
 		

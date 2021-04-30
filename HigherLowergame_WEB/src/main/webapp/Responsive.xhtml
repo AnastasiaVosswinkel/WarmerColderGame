@@ -23,9 +23,9 @@
 <!--     <title>Colder Warmer Game</title> -->
 <!-- </head> -->
 
-<body>
+<body style="background-color: white;">
 	<h:form>
-	<p:panel id="everything">
+	<p:panel id="everything" style="border:none;">
     <main>
         <box>
                 <div style="text-align: center;">
@@ -35,47 +35,32 @@
                     <h:outputText value="#{weatherGameBean.motivatingMsg}" />
                 </div>
         </box>
-
         <section>
-        <article>
-           
+        <article>     
                 <table cellPadding="0" cellSpacing="0">
-
                     <tr>
-
                        <td style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(#{weatherGameBean.city1.photo}); width: 500px; height: 600px; background-size: cover; background-repeat:no-repeat  ">
-
                             <div style="font-family: 'Comic Sans MS', 'Times New Roman';
-
-                                        font-size: 10px; font-weight: bold; color: white; text-align: center; width: 500px; height: 300px; ">
-                                
-													<br> </br>
-						
+                                       font-size: 10px; font-weight: bold; color: white; text-align: center; width: 500px; height: 300px; ">                                
+						<br> </br>						
 						<h:outputText id="in_1" value="in"
 							style="font-size: 14px !important; font-weight:; color: white" />
-							<br> </br>
+						<br> </br>
 						<h:outputText id="city_name_1"
 							value="#{weatherGameBean.city1.name}"
 							style="font-size: 40px !important; font-weight:; color: white" />
-													<br> </br>
+						<br> </br>
 						<h:outputText id="is_1" value="it is"
 							style="font-size: 14px !important; font-weight:; color: white" />
-													<br> </br>
+						<br> </br>
 						<h:outputText id="city_weather_1"
 							value="#{weatherGameBean.city1.temperature} °C"
 							style="font-size: 30px !important; font-weight:bold; color: yellow" />
-
                             </div>
                         </td>
                     </tr>
-                </table>
-           
-        
-            
-            
-        </article>
-        
-            
+                </table>                   
+        </article>    
         <article>
            
                 <table cellPadding="0" cellSpacing="0">
