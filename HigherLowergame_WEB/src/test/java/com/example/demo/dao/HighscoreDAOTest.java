@@ -36,7 +36,7 @@ public class HighscoreDAOTest {
 		users.add(anso);
 		users.add(georg);
 		users.add(anton);
-		//WeatherBeanGame bean = new WeatherBeanGame();
+
 		users = highscoreDAO.rankUsers(users);
 		
 		System.out.println(users);

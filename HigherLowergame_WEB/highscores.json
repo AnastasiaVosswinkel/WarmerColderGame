@@ -101,33 +101,57 @@
     "rank": 12
   },
   {
+    "id": 22,
+    "score": 1,
+    "name": "Esra",
+    "rank": 12
+  },
+  {
+    "id": 23,
+    "score": 1,
+    "name": "Esra",
+    "rank": 12
+  },
+  {
+    "id": 24,
+    "score": 1,
+    "name": "Esra",
+    "rank": 12
+  },
+  {
     "id": 5,
     "score": 0,
     "name": "Anton",
-    "rank": 18
+    "rank": 21
   },
   {
     "id": 6,
     "score": 0,
     "name": "Seb",
-    "rank": 18
+    "rank": 21
   },
   {
     "id": 16,
     "score": 0,
     "name": "Anastasia",
-    "rank": 18
+    "rank": 21
   },
   {
     "id": 16,
     "score": 0,
     "name": "Anastasia",
-    "rank": 18
+    "rank": 21
   },
   {
     "id": 20,
     "score": 0,
     "name": "User2",
-    "rank": 18
+    "rank": 21
+  },
+  {
+    "id": 25,
+    "score": 0,
+    "name": "Nico",
+    "rank": 21
   }
 ]
