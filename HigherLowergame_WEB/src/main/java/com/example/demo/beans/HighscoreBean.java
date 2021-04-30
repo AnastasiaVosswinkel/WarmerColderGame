@@ -33,36 +33,15 @@ public class HighscoreBean {
 	}
 	
 	
-	public ArrayList<User> rankUsers (ArrayList<User> users){
-		users.sort(Collections.reverseOrder());
-		
-		users.get(0).setRank(1);
-		for (int i = 1; i < users.size(); i++) {
-			if (users.get(i).getScore() == users.get(i-1).getScore()) {
-				users.get(i).setRank(users.get(i-1).getRank());
-			} else {
-				users.get(i).setRank(i+1);
-			}
-			
-		}
-		return users;
-	}
+
 	
 	public void loadHighscores() {
 		ArrayList<User> users = highscoreDAO.findAll();
-		highscoreList = rankUsers(users);
+		highscoreList = highscoreDAO.rankUsers(users);
 		System.out.println(highscoreList);
 	}
 
-	public void saveNewUserScore(){
-		newUser.setRank(0);
-		newUser.setId(highscoreList.size()); //FIX-ME this is not a correct way to assign ids
-		newUser.setScore(5); // TODO change to current score after losing a game
-		
-		highscoreList.add(newUser);
-		highscoreList = rankUsers(highscoreList);
-		highscoreDAO.saveAll(highscoreList);
-	}
+
 	
 	
 	public User getNewUser() {

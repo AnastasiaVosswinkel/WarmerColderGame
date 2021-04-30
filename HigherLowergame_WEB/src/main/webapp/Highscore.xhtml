@@ -19,9 +19,9 @@
 
 <h:body>
 	<h:form>
-    
+       			<p:commandButton value="Back to game" action="Responsive" />
         <div class="card">
-        <h5>Highscores</h5>
+        <h2>Highscores</h2>
         <p:dataTable var="user" value="#{highscoreBean.highscoreList}" id="table" allowUnsorting="true" sortMode="single" reflow="true"  >
             <p:column sortBy="#{user.rank}" headerText="Rank" sortOrder="asc">
                 <h:outputText value="#{user.rank}"/>
@@ -35,19 +35,6 @@
 
         </p:dataTable>
     	</div>
-    	
-    	<div class ="card">
-    	<p:inputText placeholder="Name" value="#{highscoreBean.newUser.name}" />
-    					<h:outputText value="Your Score: " />
-				<h:outputText value="5" />
-    						<p:commandButton value="Save" actionListener="#{highscoreBean.saveNewUserScore}"
-						update="table" />
-    	
-    	
-    	</div>
-	
-	
-	
 	
 	
 	
