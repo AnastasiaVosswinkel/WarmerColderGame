@@ -38,6 +38,17 @@ public class HighscoreDAOTest {
 		users.add(anso);
 		users.add(georg);
 		users.add(anton);
+		users.add(new User(6, 3, "Anastasia", 0));
+		users.add(new User(7, 6, "Anastasia", 0));
+		users.add(new User(8, 9, "Anastasia", 0));
+		users.add(new User(9, 3, "Sebastian", 0));
+		users.add(new User(10, 12, "Nico", 0));
+		users.add(new User(11, 3, "Anneke", 0));
+		users.add(new User(12, 5, "Anneke", 0));
+		users.add(new User(13, 11, "Esra", 0));
+		users.add(new User(14, 0, "Esra", 0));
+		
+		
 		users = highscoreDAO.rankUsers(users);
 		
 		System.out.println(users);

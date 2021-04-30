@@ -1,157 +1,92 @@
 [
   {
+    "id": 10,
+    "score": 12,
+    "name": "Nico",
+    "rank": 1
+  },
+  {
+    "id": 13,
+    "score": 11,
+    "name": "Esra",
+    "rank": 2
+  },
+  {
     "id": 2,
     "score": 10,
     "name": "Luisa",
-    "rank": 1
+    "rank": 3
   },
   {
     "id": 4,
     "score": 10,
     "name": "Georg",
-    "rank": 1
-  },
-  {
-    "id": 21,
-    "score": 6,
-    "name": "testssass",
     "rank": 3
   },
   {
-    "id": 7,
-    "score": 5,
-    "name": "Milu",
-    "rank": 4
+    "id": 8,
+    "score": 9,
+    "name": "Anastasia",
+    "rank": 5
   },
   {
-    "id": 8,
+    "id": 7,
+    "score": 6,
+    "name": "Anastasia",
+    "rank": 6
+  },
+  {
+    "id": 12,
     "score": 5,
-    "name": "Testa",
-    "rank": 4
+    "name": "Anneke",
+    "rank": 7
   },
   {
     "id": 0,
     "score": 3,
     "name": "Sebastian",
-    "rank": 6
+    "rank": 8
+  },
+  {
+    "id": 6,
+    "score": 3,
+    "name": "Anastasia",
+    "rank": 8
+  },
+  {
+    "id": 9,
+    "score": 3,
+    "name": "Sebastian",
+    "rank": 8
+  },
+  {
+    "id": 11,
+    "score": 3,
+    "name": "Anneke",
+    "rank": 8
   },
   {
     "id": 1,
     "score": 2,
     "name": "Manfred",
-    "rank": 7
+    "rank": 12
   },
   {
     "id": 3,
     "score": 2,
     "name": "Annamarie-Sophie",
-    "rank": 7
-  },
-  {
-    "id": 12,
-    "score": 2,
-    "name": "Nico",
-    "rank": 7
-  },
-  {
-    "id": 14,
-    "score": 2,
-    "name": "Anastasia2",
-    "rank": 7
-  },
-  {
-    "id": 14,
-    "score": 2,
-    "name": "Anastasia2",
-    "rank": 7
-  },
-  {
-    "id": 11,
-    "score": 1,
-    "name": "waasdfasdf",
-    "rank": 12
-  },
-  {
-    "id": 11,
-    "score": 1,
-    "name": "waasdfasdf",
-    "rank": 12
-  },
-  {
-    "id": 11,
-    "score": 1,
-    "name": "waasdfasdf",
-    "rank": 12
-  },
-  {
-    "id": 17,
-    "score": 1,
-    "rank": 12
-  },
-  {
-    "id": 18,
-    "score": 1,
-    "name": "User",
-    "rank": 12
-  },
-  {
-    "id": 19,
-    "score": 1,
-    "name": "User2",
-    "rank": 12
-  },
-  {
-    "id": 22,
-    "score": 1,
-    "name": "Esra",
-    "rank": 12
-  },
-  {
-    "id": 23,
-    "score": 1,
-    "name": "Esra",
-    "rank": 12
-  },
-  {
-    "id": 24,
-    "score": 1,
-    "name": "Esra",
     "rank": 12
   },
   {
     "id": 5,
     "score": 0,
     "name": "Anton",
-    "rank": 21
+    "rank": 14
   },
   {
-    "id": 6,
+    "id": 14,
     "score": 0,
-    "name": "Seb",
-    "rank": 21
-  },
-  {
-    "id": 16,
-    "score": 0,
-    "name": "Anastasia",
-    "rank": 21
-  },
-  {
-    "id": 16,
-    "score": 0,
-    "name": "Anastasia",
-    "rank": 21
-  },
-  {
-    "id": 20,
-    "score": 0,
-    "name": "User2",
-    "rank": 21
-  },
-  {
-    "id": 25,
-    "score": 0,
-    "name": "Nico",
-    "rank": 21
+    "name": "Esra",
+    "rank": 14
   }
 ]

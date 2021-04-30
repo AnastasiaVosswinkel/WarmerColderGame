@@ -19,23 +19,24 @@
 
 <h:body>
 	<h:form>
+		<p:panel width="500">
        			<p:commandButton value="Back to game" action="Responsive" />
         <div class="card">
         <h2>Highscores</h2>
-        <p:dataTable var="user" value="#{highscoreBean.highscoreList}" id="table" allowUnsorting="true" sortMode="single" reflow="true"  >
-            <p:column sortBy="#{user.rank}" headerText="Rank" sortOrder="asc">
+        <p:dataTable var="user" value="#{highscoreBean.highscoreList}" id="table" allowUnsorting="true" sortMode="single" reflow="true"  width="1000">
+            <p:column sortBy="#{user.rank}" headerText="Rank" sortOrder="asc" width="100">
                 <h:outputText value="#{user.rank}"/>
             </p:column>
-            <p:column sortBy="#{user.name}" headerText="Name" >
+            <p:column sortBy="#{user.name}" headerText="Name"  width="300">
                 <h:outputText value="#{user.name}"/>
             </p:column>
-            <p:column sortBy="#{user.score}" headerText="Score">
+            <p:column sortBy="#{user.score}" headerText="Score" >
                 <h:outputText value="#{user.score}"/>
             </p:column>
 
         </p:dataTable>
     	</div>
-	
+	</p:panel>
 	
 	
 	</h:form>

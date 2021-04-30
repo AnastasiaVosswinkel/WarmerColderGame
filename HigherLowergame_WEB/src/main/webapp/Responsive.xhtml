@@ -137,17 +137,19 @@
     </main>
 </p:panel>
 
-<p:dialog  id="dialog" widgetVar="dlg" minHeight="40" width="600" showEffect="fade" modal="true" closable="false" resizable="false" draggable="false">
+<p:dialog  id="dialog" widgetVar="dlg" minHeight="40" width="1000" showEffect="fade" modal="true" closable="false" resizable="false" draggable="false">
     <h:outputText value="You lost :( but remember: "/>
-        <h:outputText value="#{weatherGameBean.motivatingQuote}"/>
+        	<br> </br>
+        <h:outputText value="#{weatherGameBean.motivatingQuote}" style="font-style: italic"/>
     	<br> </br>
-    <p:commandButton value="Play again?" action="#{weatherGameBean.newGame}"
-							update="everything dialog" onClick="PF('dlg').hide()"/>
-			<br> </br>
-		<h:outputText value="Submit your score?" />
-    	<p:inputText placeholder="Name" value="#{weatherGameBean.newUser.name}" />
-    			<p:commandButton value="Submit" action="#{weatherGameBean.saveNewUserScore}" />
-    			<p:commandButton value="Show Highscores" action="Highscore" />
+
+		<h:outputText value="Submit your score?" style="padding: 10px 10px" />
+    	<p:inputText placeholder="Name" value="#{weatherGameBean.newUser.name}"  style="margin: 4px"/>
+    			<p:commandButton value="Submit" action="#{weatherGameBean.saveNewUserScore}" style="margin: 4px">   			    			
+    			</p:commandButton>
+    			<p:commandButton value="Show Highscores" action="Highscore" style="margin: 4px" />
+    			    <p:commandButton value="Play again?" action="#{weatherGameBean.newGame}"
+							update="everything dialog" onClick="PF('dlg').hide()" style="margin: 4px"/>
 						
 </p:dialog>
  </h:form>

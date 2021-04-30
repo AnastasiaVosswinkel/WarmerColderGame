@@ -146,7 +146,7 @@ public class WeatherGameBean {
 		System.out.println(highscoreList);
 	}
 
-	public void saveNewUserScore(){
+	public String saveNewUserScore(){
 
 		User userToSave = new User();
 		userToSave.setName(newUser.getName());
@@ -157,6 +157,7 @@ public class WeatherGameBean {
 		highscoreList.add(userToSave);
 		highscoreList = highscoreDAO.rankUsers(highscoreList);
 		highscoreDAO.saveAll(highscoreList);
+		return "Highscore";
 	}
 	
 	
