@@ -10,8 +10,12 @@
 <!-- http://localhost:8088/Weathergame.xhtml -->
 
 <h:head>
-	<h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
-	<style type="text/css"> </style>
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<style type="text/css">
+</style>
+
+
 </h:head>
 
 
@@ -107,6 +111,8 @@
 							<p:ajax delay="1000" listener="#{weatherGameBean.warmer}"
 								update="panel toolbar" />
 
+
+
 						</p:commandButton>
 
 
@@ -152,26 +158,24 @@
 
 		</p:panel>
 
-<p:dialog  id="dialog" widgetVar="dlg" minHeight="40" width="350" showEffect="fade" modal="true" closable="false" resizable="false" draggable="false">
-    <h:outputText value="You lost :("/>
-    <p:commandButton value="Play again?" action="#{weatherGameBean.newGame}"
-							update="panel toolbar dialog" onClick="PF('dlg').hide()"/>
-		<h:outputText value="Submit your score?" />
-    	<p:inputText placeholder="Name" value="#{weatherGameBean.newUser.name}" />
-    			<p:commandButton value="Submit" action="#{weatherGameBean.saveNewUserScore}" />
-						
-</p:dialog>
+		<p:dialog id="dialog" widgetVar="dlg" minHeight="40" width="350"
+			showEffect="fade" modal="true" closable="false" resizable="false"
+			draggable="false">
+			<h:outputText value="You lost :(" />
+			<p:commandButton value="Play again?"
+				actionListener="#{weatherGameBean.newGame}"
+				update="panel toolbar dialog" onClick="PF('dlg').hide()" />
+		</p:dialog>
 
+		<p:toolbar id="toolbar">
+			<p:toolbarGroup>
+				<h:outputText value="Your Score: " />
+				<h:outputText value="#{weatherGameBean.score}" />
+				<h:outputText value="&nbsp; &nbsp;" />
+				<h:outputText value="#{weatherGameBean.motivatingMsg}" />
 
-<p:toolbar id="toolbar">
-	<p:toolbarGroup>
-		<h:outputText value="Your Score: " />
-		<h:outputText value="#{weatherGameBean.score}" />
-		<h:outputText value="&nbsp; &nbsp;" />
-		<h:outputText value="#{weatherGameBean.motivatingMsg}" />
-
-	</p:toolbarGroup>
-</p:toolbar>
+			</p:toolbarGroup>
+		</p:toolbar>
 
 
 

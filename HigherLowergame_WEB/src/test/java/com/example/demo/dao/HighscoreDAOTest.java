@@ -9,8 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.beans.HighscoreBean;
-import com.example.demo.client.PhotoClientTest;
 import com.example.demo.model.User;
 
 @SpringBootTest
@@ -38,8 +36,8 @@ public class HighscoreDAOTest {
 		users.add(anso);
 		users.add(georg);
 		users.add(anton);
-		HighscoreBean bean = new HighscoreBean();
-		users = bean.rankUsers(users);
+		//WeatherBeanGame bean = new WeatherBeanGame();
+		users = highscoreDAO.rankUsers(users);
 		
 		System.out.println(users);
 		
