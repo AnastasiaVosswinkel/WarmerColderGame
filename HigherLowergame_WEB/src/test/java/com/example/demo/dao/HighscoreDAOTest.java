@@ -9,8 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.beans.HighscoreBean;
-import com.example.demo.client.PhotoClientTest;
 import com.example.demo.model.User;
 
 @SpringBootTest
@@ -49,6 +47,7 @@ public class HighscoreDAOTest {
 		users.add(new User(14, 0, "Esra", 0));
 		
 		
+
 		users = highscoreDAO.rankUsers(users);
 		
 		System.out.println(users);
